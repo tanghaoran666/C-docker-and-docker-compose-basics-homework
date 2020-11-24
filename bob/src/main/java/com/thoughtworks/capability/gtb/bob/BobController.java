@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class BobController {
 
     @GetMapping("/hello")
-    @ResponseStatus(HttpStatus.OK)
     public  String hello() {
         return "Hello from Bob!";
     }

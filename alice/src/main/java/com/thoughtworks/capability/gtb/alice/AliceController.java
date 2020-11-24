@@ -17,7 +17,6 @@ public class AliceController {
 
     public String restTemplateGetTest() {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject("http://localhost:8081/hello"
-                , String.class);
+        return restTemplate.getForEntity("http://bob:8081/hello", String.class).getBody();
     }
 }
